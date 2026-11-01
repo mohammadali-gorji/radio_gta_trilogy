@@ -92,9 +92,9 @@ CustomRadio\backup\<time>\       copies of any file the installer had to overwri
 | Installer, clean folder (nothing installed) | OK - installs ASI Loader + CLEO Redux + radio, 2nd run changes nothing, uninstall keeps songs |
 | Installer, real game folder | OK - game auto-detected, existing prerequisites auto-ticked, songs imported, autostart set, helper started |
 | Playback of 7 real MP3s (different encoders/tags) | OK - every song opens, seeks +30 s, pauses and resumes (helper `--selftest`) |
-| CLEO script loads in the game | OK (script loads, no errors in `cleo_redux.log`) |
-| Music starts in a car, game radio Off | OK (confirmed in-game) |
-| Next/previous, seek, pause keys, leave/enter car resume, restart resume | Implemented and covered by the self-test for the player logic; in-game key-by-key confirmation is **not yet recorded here** - please report results in an issue |
+| CLEO script loads in the game | OK - loads with no errors in `cleo_redux.log`, bridge file updates every 250 ms |
+| In-game session with the final installer build | OK - music plays in a car with the game radio Off; next/previous song switching confirmed in the helper log; the author reported no problems with the rest of the session |
+| Seek / pause / resume after leaving the car / resume after restart | Covered by the helper self-test (all 7 songs); please report anything odd in an issue |
 | Steam / Epic / Rockstar-launcher builds | **Not tested.** The installer looks for `SanAndreas.exe`; if the folder layout differs, pick the folder that contains `SanAndreas.exe` |
 | Other game builds (e.g. 1.0.113) | Not tested. The script uses only documented CLEO calls, no memory offsets, so it should be build-independent |
 
